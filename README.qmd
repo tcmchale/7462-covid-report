@@ -58,7 +58,7 @@ top10_pop <- pops %>% filter(state == "Nebraska") %>%
 
 ## Make the plot
 rate_data %>%
-    filter(state == "Minnesota", 
+    filter(state == "Nebraska", 
          county %in% top10_pop$county) %>%
   ggplot(aes(x = date, y = rate_last, color = county)) +
   geom_line(linewidth = 2) +
@@ -66,7 +66,7 @@ rate_data %>%
   ylab("7-day COVID-19 case total per 100,000 population") +
   scale_color_discrete(name = "") +
   theme_minimal() +
-  ggtitle("COVID-19 rates for the ten most populous Minnesota counties", 
+  ggtitle("COVID-19 rates for the ten most populous Nebraska counties", 
           subtitle = paste("Latest data:", max(rate_data$date)))
 ```
 
