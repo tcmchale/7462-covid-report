@@ -1,7 +1,7 @@
 Minnesota COVID Report
 ================
 
-Report last run: 2023-03-03 17:49:11
+Report last run: 2023-03-03 21:35:03
 
 ## Introduction
 
@@ -46,14 +46,14 @@ populous Minnesota counties:
 
 ``` r
 ## Identify the top 10 most populous counties
-top10_pop <- pops %>% filter(state == "Minnesota") %>%
+top10_pop <- pops %>% filter(state == "Nebraska") %>%
   arrange(desc(pop)) %>%
   slice(1:10) %>%
   mutate(county = factor(county))
 
 ## Make the plot
 rate_data %>%
-    filter(state == "Minnesota", 
+    filter(state == "Nebraska", 
          county %in% top10_pop$county) %>%
   ggplot(aes(x = date, y = rate_last, color = county)) +
   geom_line(linewidth = 2) +
@@ -61,7 +61,7 @@ rate_data %>%
   ylab("7-day COVID-19 case total per 100,000 population") +
   scale_color_discrete(name = "") +
   theme_minimal() +
-  ggtitle("COVID-19 rates for the ten most populous Minnesota counties", 
+  ggtitle("COVID-19 rates for the ten most populous Nebraska counties", 
           subtitle = paste("Latest data:", max(rate_data$date)))
 ```
 
