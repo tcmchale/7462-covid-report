@@ -1,7 +1,7 @@
-Minnesota COVID Report
+Nebraska COVID Report
 ================
 
-Report last run: 2023-03-03 21:35:03
+Report last run: 2023-03-03 21:44:25
 
 ## Introduction
 
@@ -39,10 +39,10 @@ rate_data <- county_data %>%
   mutate(rate_last = totalcases_last / pop * POP_DENOM)
 ```
 
-### Minnesota
+### Nebraska
 
 Here is a plot of COVID-19 rates since Jan. 1, 2023 in the 10 most
-populous Minnesota counties:
+populous Nebraska counties:
 
 ``` r
 ## Identify the top 10 most populous counties
