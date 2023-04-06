@@ -47,7 +47,7 @@ rate_data <- county_data %>%
 
 ### Nebraska
 
-Here is a plot of COVID-19 rates since Jan. 1, 2023 in the 10 most populous Nebraska counties:
+Here is a plot of COVID-19 rates since Jan. 1, 2023 in the 10 most populous counties in Nebraska:
 
 ```{r}
 ## Identify the top 10 most populous counties
